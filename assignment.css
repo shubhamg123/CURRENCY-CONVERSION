@@ -1,0 +1,270 @@
+*{
+  margin:0px;
+
+}
+body{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+
+
+}
+.maincontainer{
+  width: 100%;
+  height:100%;
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  
+}
+.container{
+
+display:flex;
+flex-direction: column;
+column-gap: 20%;
+align-items: center;
+justify-content: center;
+height:90%;
+width: 33%;
+background-color: bisque;
+
+
+
+}
+.seperator{
+
+width:400px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.seperator .span{
+
+width:14px;
+height:240px;
+background-color: silver;
+border-radius: 20px;
+
+}
+.lle{
+
+position:absolute;
+display: flex;
+top:20%;
+align-items:center;
+justify-content: center;
+z-index: 4;
+}
+.icon{
+  width:30px;
+  height:33px;
+  z-index: 2;
+  background-color:rgba(0, 0, 255, 0.829);
+  position:relative;
+  top:0%;
+  margin-right:-7em;
+  /*margin-top:-0.2em;*/
+  /*left:20%;*/
+  background:transparent;
+  outline: none;
+  
+}
+.img{
+
+  position: relative;
+  top:20%;
+  left:0%;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+ 
+}
+.value{
+  position: relative;
+  width:120px;
+}
+.textarea{
+
+width:40px;
+height:20px;    
+}
+#currencies{
+
+background-color: rgba(0, 0, 255, 0.829);
+position:absolute;
+color:whitesmoke;
+bottom:0%;
+margin-left: auto;
+margin-right: auto;
+width:150px;
+height:36px;
+border: none;
+border-top: 1.5px solid black;
+border-left: 1.5px solid black;
+border-bottom: 1.9px solid rgb(217, 208, 226);
+border-right: 2.2px solid rgb(217, 208, 226);
+outline: none;
+opacity:0.7;
+shape-outside: 1px solid rgb(217, 208, 226);
+}
+.input{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 3px;
+    position:absolute;
+    top:30%;
+    margin-right: auto;
+    margin-left: auto;
+    width:150px;
+    height:36px;
+    border: none;
+    border-bottom: 1.2px solid rgba(245, 88, 15, 0.932);
+    overflow: hidden;
+    background-color:rgb(225, 228, 231);
+    
+
+
+}
+#inp{
+    position:absolute;
+    top:52%;
+    left:9%;
+    outline: none;
+    border: none;
+    width:125px;
+    background-color:rgb(225, 228, 231);
+    pointer-events:visible;
+    
+}
+label{
+    position:absolute;
+    top:29%;
+    left:10%;
+    font-size: 15px;
+    z-index:1;
+    color:rgba(7, 72, 77, 0.521);
+    background-color:rgb(225, 228, 231);
+}
+.button{
+
+    background-color:#e44118;
+    position: static;
+    margin-top: 80%;
+    margin-left: auto; 
+    margin-right: auto;
+    width:110px;
+    height:50px;
+    
+    font-size: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(209, 202, 202);
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+.message{
+    position: absolute;
+    top:41%;
+}
+@media  (max-width: 767px)  {
+  .maincontainer{
+
+    
+flex-direction: unset;
+  }
+   
+  .seperator .span {
+    transform: rotate(90deg);
+  }
+  .value{
+     margin-left: auto;
+     margin-right: auto;
+     display: block;
+
+  }
+
+} 
+/*$primary: #0077FF
+$dark: #000
+
+body
+  height: 100vh
+  display: grid
+  font-family: Roboto
+  -webkit-text-size-adjust: 100%
+  -webkit-font-smoothing: antialiased
+  
+*
+  box-sizing: border-box
+  
+.inp
+  position: relative
+  margin: auto
+  width: 100%
+  max-width: 280px
+  border-radius: 3px
+  overflow: hidden
+
+  .label
+    position: absolute
+    top: 20px
+    left: 12px
+    font-size: 16px
+    color: rgba($dark,.5)
+    font-weight: 500
+    transform-origin: 0 0
+    transform: translate3d(0,0,0)
+    transition: all .2s ease
+    pointer-events: none
+
+  .focus-bg
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba($dark,.05)
+    z-index: -1
+    transform: scaleX(0)
+    transform-origin: left
+
+  input
+    -webkit-appearance: none
+    appearance: none
+    width: 100%
+    border: 0
+    font-family: inherit
+    padding: 16px 12px 0 12px
+    height: 56px
+    font-size: 16px
+    font-weight: 400
+    background: rgba($dark,.02)
+    box-shadow: inset 0 -1px 0 rgba($dark,.3)
+    color: $dark
+    transition: all .15s ease
+
+    &:hover
+      background: rgba($dark,.04)
+      box-shadow: inset 0 -1px 0 rgba($dark,.5)
+    
+    &:not(:placeholder-shown)
+      + .label
+        color: rgba($dark,.5)
+        transform: translate3d(0,-12px,0) scale(.75)
+    
+    &:focus
+      background: rgba($dark,.05)
+      outline: none
+      box-shadow: inset 0 -2px 0 $primary
+      + .label
+        color: $primary
+        transform: translate3d(0,-12px,0) scale(.75)
+        + .focus-bg
+          transform: scaleX(1)
+          transition: all .1s ease
